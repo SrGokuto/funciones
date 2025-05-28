@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JS</title>
+</head>
+    <body>
+        <header>
+            <h2>Explicación de las Funciones en JavaScript</h2>
+            <a href="./index.html"><h2>Volver a la página principal</h2></a>
+        </header>
+            <h3>¿Qué es una función?</h3>
+            <p class="small_box">Una función es un bloque o conjunto de codigo que se ejecutará al llamarlo. <br> Tomemos por ejemplo el siguiente codigo:</p>
+        <code>
+            <p><span id="code_functions">function</span> 
+            <span id="code_text">saludar</span><span id="code_brackets">()</span>
+            <span id="code_brackets">{</span></p>
+            <p><span id="#code_notvisible">lorem ipsum</span><span id="code_reserved">console.</span><span id="code_text">log</span><span id="code_fbrackets">(</span><span id="code_text">"Hola! Este mensaje se ha enviado desde una función"</span><span id="code_fbrackets">)</spans><span id="code_brackets">;</span></p>
+            <p><span id="code_brackets">}</span></p>
+        </code>
+        <p class="small_box">La función se llama saludar, y su funcionamiento es bastante simple: muestra un mensaje, en este caso, un saludo en consola. Sin embargo, al ejecutar dicho codigo, no aparecerá nada en consola, y eso es porque solo la <strong>declaramos</strong>, aún no hemos llamado/ejecutado la función!</p>
+        <p class="small_box">Para esto, lo que hacemos es poner el nombre de la función en nuestro codigo de la siguiente forma:</p>
+        <code>
+            <p><span id="code_text">saludar</span><span id="code_brackets">();</span></p>
+        </code>
+        <p class="small_box">Con esos simples pasos, ya tenemos una función sencilla que envía un mensaje en consola!</p>
+        <img src="./assets/img/funcion_en_ejecucion1.png" alt="Función en ejecución" height="383" width="512">
+        <p class="small_box">Sin embargo las funciones pueden ser mucho más poderosas, pues estas pueden recibir datos para procesarlos de una forma u otra.</p>
+        <p class="small_box">Uno de mis ejemplos favoritos es el de simplificar el mostrar cosas en consola:</p>
+        <code>
+            <p><span id="code_functions">function</span> 
+            <span id="code_text">escribir</span><span id="code_brackets">(<span id="code_text">texto</span>)</span>
+            <span id="code_brackets">{</span></p>
+            <p><span id="#code_notvisible">lorem ipsum</span><span id="code_reserved">console.</span><span id="code_text">log</span><span id="code_fbrackets">(</span><span id="code_text">texto</span><span id="code_fbrackets">)</spans><span id="code_brackets">;</span></p>
+            <p><span id="code_brackets">}</span></p>
+        </code>
+        <p class="small_box">Es bastante sencillo de entender, y al mismo tiempo te mustra el poder que pueden llegar a tener las funciones si las utilizas de forma correcta.</p>
+        <p class="small_box">Lo que hace es recibir los datos (Pueden ser texto o números, pues lo unico que hace es mostrarlos en consola) y se los manda a un <code><span id="code_text">console.log</span></code> para mostrarlos en consola. La forma correcta de llamar a esta función es la siguiente:</p>
+        <code>
+            <p><span id="code_text">escribir</span><span id="code_brackets">(<span id="code_text">"Hola! este mensaje se muestra desde una función con parametros!"</span>);</span></p>
+        </code>
+        <p>Y tan simple como eso, se mostrará en consola!</p>
+        <img src="./assets/img/funcion_con_parametros.png" alt="Función con parametros" heigth="383" width="512">
+        <p class="small_box">Existen muchas otras formas de utilizar las funciones, por ejemplo para obtener un resultado de alguna operación, necesitas <strong>retornar</strong> el resultado:</p>
+        <code>
+            <p><span id="code_functions">function</span> 
+            <span id="code_text">suma</span><span id="code_brackets">(<span id="code_text">a, b</span>)</span>
+            <span id="code_brackets">{</span></p>
+            <p><span id="#code_notvisible">lorem ipsum</span><span id="code_brackets">return </span><span id="code_text">a <span id="code_functions"> + </span> b</span><span id="code_brackets">;</span></p>
+            <p><span id="code_brackets">}</span></p>
+        </code>
+        <p class="small_box">La función lo que hace es recibir dos valores, en este caso <strong>a</strong> y <strong>b</strong>, luego de eso, los suma, y procede a retornar el valor de sumar a + b. <br> para ejecutar dicha función, la llamamos de la siguiente forma:</p>
+        <code>
+            <p><span id="code_functions">let </span> <span id="code_text">operacion </span><span id="code_functions">=</span><span id="code_reserved"> suma</span><span id="code_brackets">(<span id="code_text">1<span>,</span> 3</span>);</span></p><p><span id="code_text"><span id="code_reserved">console.</span>log</span><span id="code_brackets">(<span id="code_text">operacion</span>);</span></p>
+        </code>
+        <p class="small_box">Y ya estaría, tan simple como eso, la función se ejecutará, sumará a + b, que en este caso sería 1 + 3, y mostrará el resultado en consola!</p>
+        <img src="./assets/img/funcion_con_retorno.png" alt="Función con retorno" width="512" height="383">
+        <p class="small_box">Tambien existen la llamadas "Funciones de flecha", las cuales sirven para crear funciones que se ejecutan al momento de declararlas, sirven para hacer operaciones algo más sencillas, pues cuando se empiezan a hacer más complejas, volverás a utilizar parametros como el return, los corchetes y demás <br>
+        Las funciones de tipo expresión son algo más complejas, pues se pueden usar, por ejemplo, para declarar varias funciones en un array, luego puedes acceder a cada elemento del array, con lo que ejecuta cada función por separado</p>
+        <p class="small_box">Los parametros son los datos que le das a la función, si es que los necesita. <br> Un valor de retorno puede ser cualquier valor aceptado por JavaScript, como puede ser un booleano, un string, un integer, un float, un double, un array, un object, etc</p>
+        <p>Al trabajar con funciones se recomienda seguir unas practicas, la más importante siendo el nombrar las funciones de forma descriptiva, para saber que hacer cada función</p>
+        <p>Se considera que una función es muy larga cuando tiene, en promedio, unas 35 lineas o más</p>
+        <footer>Jeonardo José Perche Durán | Ficha 3203082 ADSO | GNU General Public License</footer>
+    </body>
+</html>
